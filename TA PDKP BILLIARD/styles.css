@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: #5067a7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+}
+
+form input[type="text"],
+form {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form input[type="text"],
+form {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #333333;
+    font-weight: bold;
+}
+
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+form input[type="time"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #240d8a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.result-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.result-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.result-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.result-message a {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.result-message a:hover {
+    text-decoration: solid;
+}
