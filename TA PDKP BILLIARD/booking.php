@@ -29,15 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Error, tolong masukkan waktu yang valid.";
         header("Location: index.php?error=" . urlencode($error));
         exit();
-    } else {
-        if ($booking->checkAvailability($date, $time)) {
-            $bookedPackage = $booking->bookTable($date, $time, $package); // Menggunakan nilai paket yang dipilih
-            $message = "Selamat $name ,pesanan anda berhasil dibuat."."</br>"." Silahkan datang pada $date pukul $time"."</br>"."Paket yang dipesan: $bookedPackage";
-        } else {
-            $error = "Maaf, paket tidak tersedia pada tanggal $date dan waktu $time. Silakan pilih tanggal atau waktu lain.";
-            header("Location: index.php?error=" . urlencode($error));
-            exit();
-        }
+    } 
+    else {
+        $booking->checkAvailability($date, $time);
+        $bookedPackage = $booking->bookTable($date, $time, $package); // Menggunakan nilai paket yang dipilih
+        $message = "Selamat $name ,pesanan anda berhasil dibuat."."</br>"." Silahkan datang pada $date pukul $time"."</br>"."Paket yang dipesan: $bookedPackage"; 
     }
 }
 ?>
